@@ -4,7 +4,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Permisos') }}
         </h2>
-        <a href="{{route('articles.create')}}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded">Crear Nuevo Permiso</a>
+        <a href="{{route('permissions.create')}}" class="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded">Crear Nuevo Permiso</a>
      
     </div>
     </x-slot>
@@ -30,18 +30,22 @@
                         <td class="px-6 py-3">
                             {{ $permission->id }}
                         </td>
-                        <td class="px-6 py-3 text-center"> 
+                        <td class="px-6 py-3 text-left"> 
                             {{ $permission->name }}</td>
                         <td class="px-5 py-3">
                             {{ \Carbon\Carbon::parse($permission->created_at)->format('d M, y') }}</td>
                         <td class="px-6 py-3 text-center">
+                            @can('edit permissions')
                             <a href="{{ route("permissions.edit", $permission->id) }}" class="bg-slate-700 text-sm rounded-md text-white px-3 py-2 mr-2">
                                 Edit
                             </a> 
+                            @endcan
+                            @can('delete permissions')
                             <a href="javascript:void(0)" onclick="deletePermission({{ $permission->id }})" 
                                 class="bg-red-300 text-sm rounded-md text-white px-3 py-2">
                                 Delete
                             </a>
+                            @endcan
                         </td>
                     </tr>
                     @endforeach

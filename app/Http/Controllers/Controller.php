@@ -7,10 +7,11 @@ use Illuminate\Support\Facades\Validator;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
-
-class Controller extends BaseController
+class Controller 
 {
-    //Método para listar todos los permisos
-  
+    
+
 }

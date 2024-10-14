@@ -38,13 +38,17 @@
                         <td class="px-5 py-3">
                             {{ \Carbon\Carbon::parse($article->created_at)->format('d M, y') }}</td>
                         <td class="px-6 py-3 text-center">
+                            @can('edit articles')
                             <a href="{{ route("articles.edit", $article->id) }}" class="bg-slate-700 text-sm rounded-md text-white px-3 py-2 mr-2">
                                 Edit
                             </a> 
+                            @endcan
+                            @can('delete articles')
                             <a href="javascript:void(0)" onclick="deleteArticle({{ $article->id }})" 
                                 class="bg-red-300 text-sm rounded-md text-white px-3 py-2">
                                 Delete
                             </a>
+                            @endcan
                         </td>
                     </tr>
                     @endforeach
