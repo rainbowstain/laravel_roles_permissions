@@ -29,6 +29,11 @@ Desarrollador de Software en Ultra Crop Care
 - Trabajar con archivos de configuración
 - Backend para una aplicación web de gestión de contenido
 - Trabajar con el patrón de diseño MVC
+- Trabajar con Middlewares
+- Trabajar con Controladores
+- Trabajar con Modelos
+- Trabajar con Migraciones
+
 
 
 ## Tecnologías Utilizadas
@@ -37,15 +42,27 @@ Desarrollador de Software en Ultra Crop Care
 - Laravel 11
 - MySQL
 - Git
+- Vite
+- JSON
+- JavaScript
+- HTML
+- CSS
+- Tailwind
+
 
 ## Instalación
 
+### Vite
+- npm install
+- npm run dev
+### Laravel
 1. Clona este repositorio
 2. Ejecuta `composer install`
 3. Copia `.env.example` a `.env` y configura tus variables de entorno
 4. Ejecuta `php artisan key:generate`
 5. Ejecuta `php artisan migrate`
 6. Inicia el servidor con `php artisan serve`
+
 
 ## Contribuciones
 
