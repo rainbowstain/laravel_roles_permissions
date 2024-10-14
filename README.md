@@ -18,13 +18,22 @@ Desarrollador de Software en Ultra Crop Care
 
 - Familiarizarme con las nuevas características de Laravel 11
 - Practicar el desarrollo de APIs RESTful
+- Practicar Spatie Laravel Permission
+- Practicar Spatie Laravel Role
 - Implementar autenticación y autorización
 - Trabajar con bases de datos usando Eloquent ORM
 - Explorar las mejores prácticas de desarrollo en Laravel
+- Trabajar con formularios y validaciones
+- Trabajar con AJAX
+- Trabajar con archivos estáticos
+- Trabajar con archivos de configuración
+- Backend para una aplicación web de gestión de contenido
+- Trabajar con el patrón de diseño MVC
+
 
 ## Tecnologías Utilizadas
 
-- PHP 8.x
+- PHP 8.3
 - Laravel 11
 - MySQL
 - Git
@@ -42,10 +51,3 @@ Desarrollador de Software en Ultra Crop Care
 
 Este es un proyecto personal de práctica, pero si tienes sugerencias o encuentras algún error, no dudes en abrir un issue o enviar un pull request.
 
-## Agradecimientos
-
-Gracias a [Ultra Crop Care](http://ultracropcare.com/) por fomentar el crecimiento profesional y la innovación en el desarrollo de software para la agricultura intensiva.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
