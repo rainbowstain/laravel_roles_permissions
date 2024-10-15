@@ -19,6 +19,7 @@ class RoleController extends Controller implements HasMiddleware
             new Middleware('permission:edit roles', only: ['edit']),
             new Middleware('permission:create roles', only: ['create']),
             new Middleware('permission:delete roles', only: ['destroy']),
+            new Middleware('role:admin', only: ['index, create, store, edit, update, destroy']),
         ];
     }
     public function index(){

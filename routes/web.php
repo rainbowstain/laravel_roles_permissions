@@ -47,13 +47,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/articles/{id}', [ArticleController::class, 'update'])->name('articles.update');
     Route::delete('/articles', [ArticleController::class, 'destroy'])->name('articles.destroy');
 
-    // Rutas de Usuarios
+ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
-    // Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
-    // Route::post('/users', [UserController::class, 'store'])->name('users.store');
-     Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
-     Route::post('/users/{id}', [UserController::class, 'update'])->name('users.update');
-    // Route::delete('/users', [UserController::class, 'destroy'])->name('users.destroy');
+    Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+    Route::post('/users/{id}', [UserController::class, 'update'])->name('users.update');
+});
+
 });
 
 require __DIR__.'/auth.php';
