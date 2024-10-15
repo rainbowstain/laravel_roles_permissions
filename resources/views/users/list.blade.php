@@ -51,11 +51,13 @@
                                     Edit
                                 </a> 
                         @endcan
-                                {{-- <a href="javascript:void(0)" onclick="deleteUser({{ $user->id }})" 
+                        @can('delete users')
+                                <a href="javascript:void(0)" onclick="deleteUser({{ $user->id }})" 
                                     class="bg-red-300 text-sm rounded-md text-white px-3 py-2">
                                     Delete
-                                </a>  --}}
+                                </a> 
                             </td>
+                        @endcan
 
                     </tr>
                     @endforeach
